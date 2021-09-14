@@ -16,11 +16,17 @@ import Testimonial from "../components/Testimonial";
 import Property from "../components/Property";
 import LatestProperty from "../components/LatestProperty";
 
+import {
+  getAllPostsForHome,
+  getAgentsForHome,
+  getTestimoniesForHome,
+} from "../lib/api";
+
 const query = `//groq
   *[_type == "product" && defined(slug.current)]
 `;
 
-function IndexPage(props) {
+function IndexPage({ allPosts, allAgents, allTestimonies, preview }) {
   // const { productsData, preview } = props;
   // const router = useRouter();
 
@@ -31,20 +37,20 @@ function IndexPage(props) {
   //   initialData: productsData,
   //   enabled: preview || router.query.preview !== null,
   // });
-
+  console.log("allAgents", allAgents);
   return (
     <>
       <Header />
       <Purcharse />
       <Intro />
-      <Property />
-      <Team />
+      <Property posts={allPosts} />
+      <Team teams={allAgents} />
       <Services />
       <LatestProperty />
-      <Feature />
       <Counter />
+      <Feature />
       <Purcharse />
-      <Testimonial />
+      <Testimonial testimonies={allTestimonies} />
       <Footer />
       <Copyright />
       <Preloader />
@@ -63,5 +69,16 @@ function IndexPage(props) {
 //     },
 //   };
 // }
+
+export async function getStaticProps({ preview = false }) {
+  const allPosts = await getAllPostsForHome(preview);
+  const allAgents = await getAgentsForHome(preview);
+  const allTestimonies = await getTestimoniesForHome(preview);
+
+  return {
+    props: { allPosts, allAgents, allTestimonies, preview },
+    revalidate: 1,
+  };
+}
 
 export default IndexPage;

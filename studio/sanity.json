@@ -1,11 +1,11 @@
 {
   "root": true,
   "api": {
-    "projectId": "guw865dr",
+    "projectId": "my0esskz",
     "dataset": "production"
   },
   "project": {
-    "name": "Next.JS E-commerce example",
+    "name": "Immoban243",
     "basePath": "/studio"
   },
   "plugins": [
@@ -13,24 +13,17 @@
     "@sanity/components",
     "@sanity/default-layout",
     "@sanity/default-login",
-    "@sanity/desk-tool",
-    "@sanity/color-input"
+    "@sanity/desk-tool"
   ],
   "env": {
     "development": {
-      "plugins": [
-        "@sanity/vision"
-      ]
+      "plugins": ["@sanity/vision"]
     }
   },
   "parts": [
     {
       "name": "part:@sanity/base/schema",
       "path": "./schemas/schema"
-    },
-    {
-      "implements": "part:@sanity/desk-tool/structure",
-      "path": "./src/deskStructure"
     }
   ]
 }
