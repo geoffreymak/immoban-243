@@ -1,0 +1,66 @@
+Arguments: 
+  C:\Program Files\nodejs\node.exe C:\Program Files (x86)\Yarn\bin\yarn.js add lerna --dev
+
+PATH: 
+  C:\Python39\Scripts\;C:\Python39\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\HP\IdrsOCR_15.2.10.1114\;C:\Program Files\Git\cmd;C:\ProgramData\chocolatey\bin;C:\Program Files\OpenJDK\openjdk-8u292-b10\bin;C:\Program Files\nodejs\;C:\Program Files (x86)\Yarn\bin\;C:\Users\gmak\AppData\Local\Microsoft\WindowsApps;C:\Users\gmak\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\gmak\AppData\Local\Android\Sdk\platform-tools;C:\Users\gmak\AppData\Local\Yarn\bin;C:\Program Files\heroku\bin;C:\Program Files\nodejs\;C:\Users\gmak\AppData\Local\Programs\mongosh\
+
+Yarn version: 
+  1.22.5
+
+Node version: 
+  14.17.1
+
+Platform: 
+  win32 x64
+
+Trace: 
+  Error: EPERM: operation not permitted, copyfile 'C:\Users\gmak\AppData\Local\Yarn\Cache\v6\npm-@octokit-graphql-4.8.0-664d9b11c0e12112cbf78e10f49a05959aa22cc3-integrity\node_modules\@octokit\graphql\dist-types\with-defaults.d.ts' -> 'C:\Users\gmak\Desktop\immoban-243\node_modules\@octokit\graphql\dist-types\with-defaults.d.ts'
+
+npm manifest: 
+  {
+    "name": "sanity-template-nextjs-ecommerce",
+    "version": "1.0.0",
+    "private": true,
+    "description": "Sanity.io and Next.js Ecommerce Starter template",
+    "scripts": {
+      "dev": "concurrently \"next\" \"cd studio && sanity start\"",
+      "build": "echo 'Building Sanity to public/studio…' && cd studio && sanity build ../public/studio -y && cd .. && next build",
+      "start": "vercel dev",
+      "postinstall": "lerna bootstrap",
+      "check-template": "sanity-template check"
+    },
+    "repository": {
+      "type": "git",
+      "url": "git+https://github.com/sanity-io/sanity-template-nextjs-ecommerce.git"
+    },
+    "dependencies": {
+      "@sanity/client": "^2.0.1",
+      "@sanity/image-url": "^0.140.19",
+      "next": "^10.0.1",
+      "next-sanity": "^0.1.8",
+      "react": "^17.0.1",
+      "react-dom": "^17.0.1"
+    },
+    "devDependencies": {
+      "@sanity/cli": "^2.19.1",
+      "concurrently": "^5.3.0",
+      "postcss-flexbugs-fixes": "4.2.1",
+      "postcss-preset-env": "^6.7.0",
+      "prettier": "^2.1.2",
+      "sanity-template": "^2.1.1",
+      "tailwindcss": "^1.9.6"
+    },
+    "keywords": [],
+    "author": "Sanity.io <hello@sanity.io>",
+    "license": "MIT",
+    "bugs": {
+      "url": "https://github.com/sanity-io/sanity-template-nextjs-ecommerce/issues"
+    },
+    "homepage": "https://github.com/sanity-io/sanity-template-nextjs-ecommerce#readme"
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
