@@ -1,10 +1,48 @@
 import React from "react";
 
 import Link from "next/link";
-
+import Skeleton from "@mui/material/Skeleton";
+import Stack from "@mui/material/Stack";
+import Typography from "@mui/material/Typography";
+import Pagination from "@mui/material/Pagination";
 import { imageBuilder } from "../lib/sanity";
 
-export default function Property({ posts }) {
+const Placeholder = () => {
+  return (
+    <div className="col-lg-4 col-md-6 col-xs-12">
+      <div className="property-main">
+        <div className="property-wrap">
+          <div className="property-item">
+            <div className="item-thumb">
+              <Skeleton variant="rectangular" height={320} />
+            </div>
+            <div className="item-body">
+              <h3 className="property-title">
+                <Skeleton />
+              </h3>
+              <div className="adderess">
+                <Skeleton />
+              </div>
+              <div className="pricin-list">
+                <Skeleton />
+                <p>
+                  <Skeleton />
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+export default function Property({
+  posts,
+  loading,
+  page,
+  pageCount,
+  onPageChange,
+}) {
   return (
     <section className="property section-padding">
       <div className="container">
@@ -17,7 +55,21 @@ export default function Property({ posts }) {
           </div>
         </div>
         <div className="row">
-          {!!posts &&
+          {loading ? (
+            <>
+              <Placeholder />
+              <Placeholder />
+              <Placeholder />
+            </>
+          ) : !!posts && !posts.length ? (
+            <Stack
+              sx={{ width: "100%", marginY: 5 }}
+              justifyContent="center"
+              alignItems="center"
+            >
+              <Typography>Aucun Resultat</Typography>
+            </Stack>
+          ) : (
             posts.map((post) => (
               <div className="col-lg-4 col-md-6 col-xs-12">
                 <div className="property-main">
@@ -30,7 +82,6 @@ export default function Property({ posts }) {
                               width={480}
                               height={320}
                               className="img-fluid"
-                              src="/img/property/house-1.jpg"
                               alt=""
                               src={imageBuilder(post.image)
                                 .width(480)
@@ -40,8 +91,12 @@ export default function Property({ posts }) {
                           </a>
                         </Link>
                         <div className="label-inner">
-                          <span className="label-status label bg-red">
-                            {post.type}
+                          <span
+                            className={`label-status label ${
+                              post.category === "Vente" ? "bg-yellow" : "bg-red"
+                            }`}
+                          >
+                            {post.category}
                           </span>
                         </div>
                       </div>
@@ -66,7 +121,8 @@ export default function Property({ posts }) {
                   </div>
                 </div>
               </div>
-            ))}
+            ))
+          )}
 
           {/* <div className="col-lg-4 col-md-6 col-xs-12">
               <div className="property-main">
@@ -255,13 +311,18 @@ export default function Property({ posts }) {
               </div>
             </div>
              */}
-          <div className="col-12">
-            <div className="text-center">
-              <a href="listing.html" className="btn btn-common">
-                Tout voir
-              </a>
+          {!!posts && !!posts.length && (
+            <div className="col-12">
+              <Stack spacing={2} justifyContent="center" alignItems="center">
+                <Pagination
+                  count={pageCount}
+                  page={page}
+                  onChange={onPageChange}
+                  color="secondary"
+                />
+              </Stack>
             </div>
-          </div>
+          )}
         </div>
       </div>
     </section>

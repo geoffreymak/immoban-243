@@ -29,14 +29,9 @@ export default {
   ],
   preview: {
     select: {
-      name: "name",
-      role: "role",
-    },
-    prepare({ name, role }) {
-      return {
-        title: `${name}`,
-        subtitle: role,
-      };
+      title: "name",
+      subtitle: "testimonial",
+      media: "image",
     },
   },
 };

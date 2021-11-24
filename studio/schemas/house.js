@@ -55,6 +55,36 @@ export default {
       name: "province",
       title: "Province",
       type: "string",
+      options: {
+        list: [
+          "Bas-Uele",
+          "Équateur",
+          "Haut-Katanga",
+          "Haut-Lomami",
+          "Haut-Uele",
+          "Ituri",
+          "Kasaï",
+          "Kasaï central",
+          "Kasaï oriental",
+          "Kinshasa",
+          "Kongo-Central",
+          "Kwango",
+          "Kwilu",
+          "Lomami",
+          "Lualaba",
+          "Mai-Ndombe",
+          "Maniema",
+          "Mongala",
+          "Nord-Kivu",
+          "Nord-Ubangi",
+          "Sankuru",
+          "Sud-Kivu",
+          "Sud-Ubangi",
+          "Tanganyika",
+          "Tshopo",
+          "Tshuapa",
+        ],
+      },
     },
     {
       name: "prix",
@@ -64,6 +94,14 @@ export default {
     {
       name: "type",
       title: "Type",
+      type: "string",
+      options: {
+        list: ["Appartement", "Maison", "Studio", "Bureau", "Villa"],
+      },
+    },
+    {
+      name: "category",
+      title: "Categorie",
       type: "string",
       options: {
         list: ["Vente", "Location"],
@@ -112,14 +150,8 @@ export default {
   preview: {
     select: {
       title: "title",
-      author: "author.name",
-      media: "mainImage",
-    },
-    prepare(selection) {
-      const { author } = selection;
-      return Object.assign({}, selection, {
-        subtitle: author && `by ${author}`,
-      });
+      subtitle: "description",
+      media: "image",
     },
   },
 };
