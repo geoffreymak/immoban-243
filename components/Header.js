@@ -1,6 +1,58 @@
 import React from "react";
 
+import Link from "next/link";
+import SearchIcon from "@mui/icons-material/Search";
+import InputBase from "@mui/material/InputBase";
+import IconButton from "@mui/material/IconButton";
+import Stack from "@mui/material/Stack";
+import { styled, alpha } from "@mui/material/styles";
+
+const Search = styled("div")(({ theme }) => ({
+  position: "relative",
+  borderRadius: theme.shape.borderRadius,
+  backgroundColor: alpha(theme.palette.common.white, 0.15),
+  "&:hover": {
+    backgroundColor: alpha(theme.palette.common.white, 0.25),
+  },
+  marginLeft: 0,
+  width: "100%",
+  [theme.breakpoints.up("sm")]: {
+    marginLeft: theme.spacing(1),
+    width: "auto",
+  },
+}));
+
+const SearchIconWrapper = styled(IconButton)(({ theme }) => ({
+  padding: theme.spacing(0, 2),
+  height: 40,
+  width: 40,
+  marginLeft: 5,
+  position: "absolute",
+  // pointerEvents: "none",
+
+  zIndex: 10,
+}));
+
+const StyledInputBase = styled(InputBase)(({ theme }) => ({
+  color: "inherit",
+  "& .MuiInputBase-input": {
+    padding: theme.spacing(1, 1, 1, 0),
+    // vertical padding + font size from searchIcon
+    paddingLeft: `calc(1em + ${theme.spacing(4)})`,
+    transition: theme.transitions.create("width"),
+    width: "100%",
+    [theme.breakpoints.up("md")]: {
+      width: "12ch",
+      "&:focus": {
+        width: "20ch",
+      },
+    },
+  },
+}));
+
 export default function Header() {
+  const [search, setSearch] = React.useState("");
+
   return (
     <header id="header-wrap">
       <div class="top-bar">
@@ -23,10 +75,11 @@ export default function Header() {
             </div>
             <div class="col-lg-5 col-md-4 col-xs-12">
               <div class="roof-social float-right">
-                <a class="facekbook" href="#">
-                  <i class="lni-facebook-filled"></i>
-                </a>
-                <a class="twitter" href="#">
+                <Link href="https://m.facebook.com/baningbusinsess/?refid=46&__xts__%5B0%5D=12.AboJucMIokq_x-IhtLaiI6-TRa-uZJZyWN2RTBOh3bdXtfSpT5NbMja6E8is_da1mB2h9ZjjgW3OFdmIWCkuZ0mazD7rm9FA3jQlzYvttm5fQkptJdTZJgS9k5Pv4avipIP4wMjtZcoRxIj8WINaVC4af0DzZHwdr4LCCGNt92UCZnUCoFlovWPOeHRxEdD0WK9eZSsjpsdOnczEtiuqsAQDyOZkY4WySD8h2CratRxAnoEqCal9aHezso-c-tbjQ640Mr8fpeETPRrfhmCuUP4guscoZ5eo5Q_se6M73tdbmRW0nBzpksVe9T2Z0jzREPFwZqBZqgLwIANrw52SwsOtgxDGghvCEj8IJ5RPMFCZPDRpvxOEJIoIDw3bfb3rmw9rEn9KzN5xKr7L1eHqULEJqhFi0o8ug28f45Zg7J82chECtp6zLlc7nVDtmaaUKVvR1iLrVTPR1rEPc1blwxcKDWmiTUrALJPFQAO09zzWQPkJbAjhmn65h8UgvJcrd9YN4Z98hFxaEgBF8Rqen6owVRnTaeaU9BtR622OwpN7dmjRf8-SYBOlAALNv61LxYQ&_rdr">
+                  <a class="facekbook" target="_blank">
+                    <i class="lni-facebook-filled"></i>
+                  </a>
+                  {/* <a class="twitter" href="#">
                   <i class="lni-twitter-filled"></i>
                 </a>
                 <a class="instagram" href="#">
@@ -34,7 +87,8 @@ export default function Header() {
                 </a>
                 <a class="linkedin" href="#">
                   <i class="lni-linkedin-filled"></i>
-                </a>
+                </a> */}
+                </Link>
               </div>
               {/* <div class="header-top-right float-right">
                   <a href="login.html" class="header-top-button">
@@ -68,317 +122,62 @@ export default function Header() {
               <span class="navbar-toggler-icon"></span>
               <span class="lin-menu"></span>
             </button>
-            <a class="navbar-brand" href="index.html">
-              <img src="/img/logo.png" alt="" />
-            </a>
+            <Link href="/">
+              <a class="navbar-brand">
+                <img src="/img/logo.png" alt="" />
+              </a>
+            </Link>
           </div>
 
           <div class="collapse navbar-collapse" id="main-navbar">
-            <ul class="navbar-nav mr-auto w-100 justify-content-center">
-              {/* <li class="nav-item dropdown active">
-                <a
-                  class="nav-link dropdown-toggle"
-                  href="#"
-                  data-toggle="dropdown"
-                  aria-haspopup="true"
-                  aria-expanded="false"
-                >
-                  Home <i class="fa fa-angle-down"></i>
-                </a>
-                <div class="dropdown-menu">
-                  <a class="dropdown-item active" href="index.html">
-                    Home V1
-                  </a>
-                  <a class="dropdown-item" href="index-2.html">
-                    Home V2
-                  </a>
-                  <a class="dropdown-item" href="index-3.html">
-                    Home V3
-                  </a>
-                </div>
-              </li>
-              <li class="nav-item dropdown">
-                <a
-                  class="nav-link dropdown-toggle"
-                  href="#"
-                  data-toggle="dropdown"
-                  aria-haspopup="true"
-                  aria-expanded="false"
-                >
-                  Listing <i class="fa fa-angle-down"></i>
-                </a>
-                <div class="dropdown-menu">
-                  <a class="dropdown-item" href="listing.html">
-                    Simple Listing
-                  </a>
-                  <a class="dropdown-item" href="grid-listing.html">
-                    Grid Listing
-                  </a>
-                  <a class="dropdown-item" href="listing-map.html">
-                    List with Google Map
-                  </a>
-                </div>
-              </li>
-              <li class="nav-item dropdown">
-                <a
-                  class="nav-link dropdown-toggle"
-                  href="#"
-                  data-toggle="dropdown"
-                  aria-haspopup="true"
-                  aria-expanded="false"
-                >
-                  Property <i class="fa fa-angle-down"></i>
-                </a>
-                <div class="dropdown-menu">
-                  <a class="dropdown-item" href="property.html">
-                    Default- Variation
-                  </a>
-                  <a class="dropdown-item" href="single-property.html">
-                    Single Property
-                  </a>
-                  <a class="dropdown-item" href="full-gallery.html">
-                    Full Width Gallery
-                  </a>
-                </div>
-              </li>
-              <li class="nav-item dropdown">
-                <a
-                  class="nav-link dropdown-toggle"
-                  href="#"
-                  data-toggle="dropdown"
-                  aria-haspopup="true"
-                  aria-expanded="false"
-                >
-                  Gallery <i class="fa fa-angle-down"></i>
-                </a>
-                <div class="dropdown-menu">
-                  <a class="dropdown-item" href="portfolio-2.html">
-                    2 Columns Gallery
-                  </a>
-                  <a class="dropdown-item" href="portfolio-3.html">
-                    3 Columns Gallery
-                  </a>
-                  <a class="dropdown-item" href="portfolio-4.html">
-                    4 Columns Gallery
-                  </a>
-                </div>
-              </li>
-              <li class="nav-item dropdown">
-                <a
-                  class="nav-link dropdown-toggle"
-                  href="#"
-                  data-toggle="dropdown"
-                  aria-haspopup="true"
-                  aria-expanded="false"
-                >
-                  Pages <i class="fa fa-angle-down"></i>
-                </a>
-                <div class="dropdown-menu">
-                  <a class="dropdown-item" href="about.html">
-                    About Us
-                  </a>
-                  <a class="dropdown-item" href="agents.html">
-                    Agents
-                  </a>
-                  <a class="dropdown-item" href="rent.html">
-                    For Rent
-                  </a>
-                  <a class="dropdown-item" href="sale.html">
-                    For Sale
-                  </a>
-                  <a class="dropdown-item" href="pricing.html">
-                    Pricing Tables
-                  </a>
-                  <a class="dropdown-item" href="dashboard.html">
-                    Dashboard
-                  </a>
-                  <a class="dropdown-item" href="submit-property.html">
-                    Submission Form
-                  </a>
-                  <a class="dropdown-item" href="faq.html">
-                    FAQ
-                  </a>
-                  <a class="dropdown-item" href="testimonials.html">
-                    Testimonials
-                  </a>
-                  <a class="dropdown-item" href="typography.html">
-                    Typography
-                  </a>
-                </div>
-              </li>
-              <li class="nav-item dropdown">
-                <a
-                  class="nav-link dropdown-toggle"
-                  href="#"
-                  data-toggle="dropdown"
-                  aria-haspopup="true"
-                  aria-expanded="false"
-                >
-                  Blog <i class="fa fa-angle-down"></i>
-                </a>
-                <div class="dropdown-menu">
-                  <a class="dropdown-item" href="blog.html">
-                    Blog Page
-                  </a>
-                  <a class="dropdown-item" href="single-blog.html">
-                    Blog Single Page
-                  </a>
-                </div>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="contact.html">
-                  Contact Us
-                </a>
-              </li> */}
-            </ul>
+            <ul class="navbar-nav mr-auto w-100 justify-content-center"></ul>
             <div class="search-add float-right">
-              <form method="post">
+              <Search>
+                <SearchIconWrapper onClick={() => {}} size="small">
+                  <SearchIcon />
+                </SearchIconWrapper>
+                <StyledInputBase
+                  placeholder="Search…"
+                  inputProps={{ "aria-label": "search" }}
+                />
+              </Search>
+              {/* <form method="post">
                 <div class="form-group">
                   <input
                     type="search"
                     name="field-name"
                     value=""
                     placeholder="Search Here"
-                    required=""
                   />
                   <button type="submit" class="search-btn">
                     <span class="lni-search"></span>
                   </button>
                 </div>
-              </form>
+              </form> */}
             </div>
           </div>
         </div>
 
         <ul class="mobile-menu">
-          {/* <li>
-            <a class="active" href="index.html">
-              Home
-            </a>
-            <ul class="dropdown">
-              <li>
-                <a class="active" href="index.html">
-                  Home V1
-                </a>
-              </li>
-              <li>
-                <a href="index-2.html">Home V2</a>
-              </li>
-              <li>
-                <a href="index-3.html">Home V3</a>
-              </li>
-            </ul>
-          </li>
-          <li>
-            <a href="#">Listing</a>
-            <ul class="dropdown">
-              <li>
-                <a href="listing.html">Simple Listing</a>
-              </li>
-              <li>
-                <a href="grid-listing.html">Grid Listing</a>
-              </li>
-              <li>
-                <a href="listing-map.html">List with Google Map</a>
-              </li>
-            </ul>
-          </li>
-          <li>
-            <a href="#">Property</a>
-            <ul class="dropdown">
-              <li>
-                <a href="property.html">Default- Variation</a>
-              </li>
-              <li>
-                <a href="single-property.html">Single Property</a>
-              </li>
-              <li>
-                <a href="full-gallery.html">Full Width Gallery</a>
-              </li>
-            </ul>
-          </li>
-          <li>
-            <a href="#">Gallery</a>
-            <ul class="dropdown">
-              <li>
-                <a href="portfolio-2.html">2 Columns Gallery</a>
-              </li>
-              <li>
-                <a href="portfolio-3.html">3 Columns Gallery</a>
-              </li>
-              <li>
-                <a href="portfolio-4.html">4 Columns Gallery</a>
-              </li>
-            </ul>
-          </li>
-          <li>
-            <a href="#">Pages</a>
-            <ul class="dropdown">
-              <li>
-                <a href="about.html">About Us</a>
-              </li>
-              <li>
-                <a href="agents.html">Agents</a>
-              </li>
-              <li>
-                <a href="rent.html">For Rent</a>
-              </li>
-              <li>
-                <a href="sale.html">For Sale</a>
-              </li>
-              <li>
-                <a href="pricing.html">Pricing Tables</a>
-              </li>
-              <li>
-                <a href="dashboard.html">Dashboard</a>
-              </li>
-              <li>
-                <a href="submit-property.html">Submission Form</a>
-              </li>
-              <li>
-                <a href="faq.html">FAQ</a>
-              </li>
-              <li>
-                <a href="testimonials.html">Testimonials</a>
-              </li>
-              <li>
-                <a href="typography.html">Typography</a>
-              </li>
-            </ul>
-          </li>
-          <li>
-            <a href="#">Blog</a>
-            <ul class="dropdown">
-              <li>
-                <a href="blog.html">Blog Page</a>
-              </li>
-              <li>
-                <a href="single-blog.html">Blog Single Page</a>
-              </li>
-            </ul>
-          </li>
-          <li>
-            <a href="contact.html">Contact Us</a>
-          </li>
-        */}
-          <li>
-            <div class="search-add w-100">
-              <form method="post">
-                <div class="form-group">
-                  <input
-                    type="search"
-                    name="field-name"
-                    value=""
-                    placeholder="Search Here"
-                    required=""
-                  />
-                  <button type="submit" class="search-btn">
-                    <span class="lni-search"></span>
-                  </button>
-                </div>
-              </form>
+          {/* <li> */}
+          <Stack sx={{ width: "100%", paddingX: 1, paddingBottom: 2 }}>
+            <div class="search-add">
+              <Search>
+                <SearchIconWrapper
+                  onClick={() => console.log("click")}
+                  size="small"
+                >
+                  <SearchIcon />
+                </SearchIconWrapper>
+                <StyledInputBase
+                  fullWidth
+                  placeholder="Search…"
+                  inputProps={{ "aria-label": "search" }}
+                />
+              </Search>
             </div>
-          </li>
+          </Stack>
+          {/* </li> */}
         </ul>
       </nav>
       <div class="clearfix"></div>

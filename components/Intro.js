@@ -111,19 +111,19 @@ export default function Intro() {
   const [page, setPage] = React.useState(1);
 
   const postRange = React.useMemo(() => {
-    const start = page * 3 - 3;
-    const end = page * 3;
+    const start = page * 6 - 6;
+    const end = page * 6;
     setLoading(true);
     return [start, end];
   }, [page]);
 
-  React.useEffect(() => {
-    const getData = async () => {
-      const latestPosts = await getLatestPosts(6);
-      setLatestPosts(latestPosts);
-    };
-    getData();
-  }, []);
+  // React.useEffect(() => {
+  //   const getData = async () => {
+  //     const latestPosts = await getLatestPosts(6);
+  //     setLatestPosts(latestPosts);
+  //   };
+  //   getData();
+  // }, []);
 
   React.useEffect(() => {
     const getData = async () => {
@@ -138,11 +138,11 @@ export default function Intro() {
         };
         const allPostsCount = await getFiltredPostsCount(data);
         const pageCount =
-          allPostsCount % 3 === 0
-            ? allPostsCount / 3
-            : allPostsCount < 3
+          allPostsCount % 6 === 0
+            ? allPostsCount / 6
+            : allPostsCount < 6
             ? 1
-            : Math.floor(allPostsCount / 3) + (allPostsCount % 3);
+            : Math.floor(allPostsCount / 6) + (allPostsCount % 6);
         const allPosts = await getFiltredPosts(data, postRange);
         setAllPosts(allPosts);
         setAllPostsCount(pageCount);

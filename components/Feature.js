@@ -23,10 +23,11 @@ export default function Feature() {
               Affaire immobilière en RDC 2019
             </h3>
             <p class="intro-desc">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit
-              nostrum, doloremque quaerat sit tempora eius est reiciendis
-              accusamus magnam quae. Explicabo dolore officia, iure a ullam
-              aliquam nemo excepturi, repellat. uod ut delectus ad tempora.
+              L'immobilier est notre service de prédilection. Pour la gestion de
+              votre patrimoine immobilier, achat, location et vente, confiez
+              vous à nous. Nous mettons à votre disposition notre expertise,
+              assistance juridique et notre savoir faire. Vous satisfaire est
+              notre préoccupation. Immoban 243 est l'idéal.
             </p>
             <div class="row">
               <div class="col-lg-6 col-md-12 col-xs-12">
@@ -38,10 +39,7 @@ export default function Feature() {
                     <a href="#">Entreprise certifié</a>
                   </h3>
                   <div class="featured-content">
-                    <p>
-                      We'll generate a sitemap for your site, submit it to
-                      search engine is and track crawler access.
-                    </p>
+                    <p>Meilleur entreprise immobilier dans la RDC</p>
                   </div>
                 </div>
               </div>
@@ -55,8 +53,8 @@ export default function Feature() {
                   </h3>
                   <div class="featured-content">
                     <p>
-                      We'll generate a sitemap for your site, submit it to
-                      search engine is and track crawler access.
+                      Nous sommes spécialisée dans la gestion, achat, vente,
+                      location et estimation des biens immobiliers.
                     </p>
                   </div>
                 </div>

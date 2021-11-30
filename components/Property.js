@@ -60,6 +60,9 @@ export default function Property({
               <Placeholder />
               <Placeholder />
               <Placeholder />
+              <Placeholder />
+              <Placeholder />
+              <Placeholder />
             </>
           ) : !!posts && !posts.length ? (
             <Stack

@@ -13,8 +13,9 @@ import Purcharse from "../components/Purcharse";
 import Services from "../components/Services";
 import Team from "../components/Team";
 import Testimonial from "../components/Testimonial";
-import Property from "../components/Property";
+// import Property from "../components/Property";
 import LatestProperty from "../components/LatestProperty";
+import PropertyDetail from "../components/PropertyDetail";
 
 import {
   getLatestPosts,
@@ -32,7 +33,7 @@ function IndexPage({ latestPosts, allAgents, allTestimonies, preview }) {
       <Header />
       <Purcharse />
       <Intro />
-      {/* <Property posts={allPosts} /> */}
+      {/* <PropertyDetail /> */}
       <Team teams={allAgents} />
       <Services />
       <LatestProperty posts={latestPosts} />
