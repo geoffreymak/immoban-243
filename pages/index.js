@@ -30,8 +30,8 @@ const query = `//groq
 function IndexPage({ latestPosts, allAgents, allTestimonies, preview }) {
   return (
     <>
-      <Header />
-      <Purcharse />
+      {/* <Header />
+      <Purcharse /> */}
       <Intro />
       {/* <PropertyDetail /> */}
       <Team teams={allAgents} />
@@ -41,9 +41,9 @@ function IndexPage({ latestPosts, allAgents, allTestimonies, preview }) {
       <Feature />
       <Purcharse />
       <Testimonial testimonies={allTestimonies} />
-      <Footer />
+      {/* <Footer />
       <Copyright />
-      <Preloader />
+      <Preloader /> */}
       {/* <ProductsPage products={products} /> */}
     </>
   );

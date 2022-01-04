@@ -37,6 +37,7 @@ const Placeholder = () => {
   );
 };
 export default function Property({
+  title,
   posts,
   loading,
   page,
@@ -49,8 +50,12 @@ export default function Property({
         <div className="row">
           <div className="col-12">
             <div className="section-title-header text-center">
-              <h2 className="section-title">Les plus populaires</h2>
-              <p>Explorer notre catalogue des maisons de qualité.</p>
+              <h2 className="section-title"> Les plus populaires</h2>
+              <p>
+                {title
+                  ? title
+                  : "Explorer notre catalogue des maisons de qualité."}
+              </p>
             </div>
           </div>
         </div>
@@ -314,7 +319,7 @@ export default function Property({
               </div>
             </div>
              */}
-          {!!posts && !!posts.length && (
+          {!!posts && !!posts.length && page && (
             <div className="col-12">
               <Stack spacing={2} justifyContent="center" alignItems="center">
                 <Pagination

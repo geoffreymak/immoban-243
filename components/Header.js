@@ -1,10 +1,18 @@
 import React from "react";
 
 import Link from "next/link";
+import { useRouter } from "next/router";
 import SearchIcon from "@mui/icons-material/Search";
 import InputBase from "@mui/material/InputBase";
 import IconButton from "@mui/material/IconButton";
 import Stack from "@mui/material/Stack";
+
+import OutlinedInput from "@mui/material/OutlinedInput";
+import InputLabel from "@mui/material/InputLabel";
+import InputAdornment from "@mui/material/InputAdornment";
+import FormHelperText from "@mui/material/FormHelperText";
+import FormControl from "@mui/material/FormControl";
+
 import { styled, alpha } from "@mui/material/styles";
 
 const Search = styled("div")(({ theme }) => ({
@@ -29,7 +37,6 @@ const SearchIconWrapper = styled(IconButton)(({ theme }) => ({
   marginLeft: 5,
   position: "absolute",
   // pointerEvents: "none",
-
   zIndex: 10,
 }));
 
@@ -51,7 +58,14 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
 }));
 
 export default function Header() {
+  const router = useRouter();
   const [search, setSearch] = React.useState("");
+
+  const onSearchClick = () => {
+    if (search) {
+      router.push(`/search/${search}`);
+    }
+  };
 
   return (
     <header id="header-wrap">
@@ -133,12 +147,14 @@ export default function Header() {
             <ul class="navbar-nav mr-auto w-100 justify-content-center"></ul>
             <div class="search-add float-right">
               <Search>
-                <SearchIconWrapper onClick={() => {}} size="small">
+                <SearchIconWrapper onClick={onSearchClick} size="small">
                   <SearchIcon />
                 </SearchIconWrapper>
                 <StyledInputBase
                   placeholder="Search…"
                   inputProps={{ "aria-label": "search" }}
+                  value={search}
+                  onChange={(e) => setSearch(e.target.value)}
                 />
               </Search>
               {/* <form method="post">
@@ -161,21 +177,41 @@ export default function Header() {
         <ul class="mobile-menu">
           {/* <li> */}
           <Stack sx={{ width: "100%", paddingX: 1, paddingBottom: 2 }}>
-            <div class="search-add">
-              <Search>
-                <SearchIconWrapper
-                  onClick={() => console.log("click")}
-                  size="small"
-                >
+            {/* <div class="search-add"> */}
+            <Search>
+              {/* <SearchIconWrapper onClick={onSearchClick} size="small">
                   <SearchIcon />
                 </SearchIconWrapper>
                 <StyledInputBase
                   fullWidth
                   placeholder="Search…"
                   inputProps={{ "aria-label": "search" }}
+                  value={search}
+                  onChange={(e) => setSearch(e.target.value)}
+                /> */}
+              <FormControl sx={{ m: 1 }} variant="outlined">
+                <OutlinedInput
+                  size="small"
+                  fullWidth
+                  id="outlined-adornment-password"
+                  value={search}
+                  onChange={(e) => setSearch(e.target.value)}
+                  endAdornment={
+                    <InputAdornment position="end">
+                      <IconButton
+                        aria-label="toggle password visibility"
+                        onClick={onSearchClick}
+                        edge="end"
+                      >
+                        <SearchIcon />
+                      </IconButton>
+                    </InputAdornment>
+                  }
+                  label="Password"
                 />
-              </Search>
-            </div>
+              </FormControl>
+            </Search>
+            {/* </div> */}
           </Stack>
           {/* </li> */}
         </ul>
