@@ -189,45 +189,20 @@ export default function Header() {
           <Stack sx={{ width: "100%", paddingX: 1, paddingBottom: 2 }}>
             {/* <div class="search-add"> */}
             <Search>
-              {/* <SearchIconWrapper onClick={onSearchClick} size="small">
-                  <SearchIcon />
+                <SearchIconWrapper onClick={onSearchClick} size="small">
+                 <SearchIcon />
                 </SearchIconWrapper>
                 <StyledInputBase
-                  fullWidth
                   placeholder="Search…"
                   inputProps={{ "aria-label": "search" }}
                   value={search}
                   onChange={(e) => setSearch(e.target.value)}
-                /> */}
-
-              <Stack spacing={1} direction="row">
-                <FormControl sx={{ m: 1 }} variant="outlined">
-                  <OutlinedInput
-                    size="small"
-                    fullWidth
-                    id="outlined-adornment-password"
-                    value={search}
-                    onChange={(e) => setSearch(e.target.value)}
-                    endAdornment={
-                      <InputAdornment position="end">
-                        <IconButton
-                          aria-label="toggle password visibility"
-                          onClick={onSearchClick}
-                          edge="end"
-                        >
-                          <SearchIcon />
-                        </IconButton>
-                      </InputAdornment>
-                    }
-                    label="Password"
-                  />
-                </FormControl>
-
-                {!!search &&   <IconButton aria-label="delete" onClick={onSearchClose}>
-                  <CloseIcon />  
-                </IconButton>}
-              </Stack>
-            </Search>
+                />
+                     {!!search &&  <SearchIconWrapper onClick={onSearchClose} size="small">
+                          <CloseIcon />  
+                      </SearchIconWrapper>
+                    } 
+              </Search>
             {/* </div> */}
           </Stack>
           {/* </li> */}
