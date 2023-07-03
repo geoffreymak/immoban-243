@@ -6,22 +6,22 @@ import { imageBuilder } from "../lib/sanity";
 
 export default function LatestProperty({ posts }) {
   return (
-    <section class="latest-property section-padding">
-      <div class="container">
-        <div class="row">
-          <div class="col-12">
-            <div class="section-title-header text-center">
-              <h2 class="section-title">Les derniers ajoutés</h2>
+    <section className="latest-property section-padding">
+      <div className="container">
+        <div className="row">
+          <div className="col-12">
+            <div className="section-title-header text-center">
+              <h2 className="section-title">Les derniers ajoutés</h2>
               <p>Explorer les dernières appartements de notre catalogue.</p>
             </div>
           </div>
         </div>
-        <div class="row">
-          <div class="col-md-12 wow fadeIn" data-wow-delay="0.8s">
-            <div id="latest-property" class="owl-carousel">
+        <div className="row">
+          <div className="col-md-12 wow fadeIn" data-wow-delay="0.8s">
+            <div id="latest-property" className="owl-carousel">
               {posts &&
                 posts.map((post) => (
-                  <div class="item">
+                  <div className="item">
                     <div className="property-main">
                       <div className="property-wrap">
                         <div className="property-item">

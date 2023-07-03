@@ -2,15 +2,15 @@ import React from 'react'
 
 export default function Footer() {
     return (
-      <footer id="footer" class="footer-area section-padding">
-        <div class="container">
-          <div class="container">
-            <div class="row">
-              <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12">
-                <h3 class="footer-titel">
+      <footer id="footer" className="footer-area section-padding">
+        <div className="container">
+          <div className="container">
+            <div className="row">
+              <div className="col-lg-3 col-md-6 col-sm-12 col-xs-12">
+                <h3 className="footer-titel">
                   A propos de <span>Nous</span>
                 </h3>
-                <ul class="footer-link">
+                <ul className="footer-link">
                   <li>
                     <a href="#">Companie</a>
                   </li>
@@ -28,11 +28,11 @@ export default function Footer() {
                   </li>
                 </ul>
               </div>
-              <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12">
-                <h3 class="footer-titel">
+              <div className="col-lg-3 col-md-6 col-sm-12 col-xs-12">
+                <h3 className="footer-titel">
                   Liens <span> Utiles</span>
                 </h3>
-                <ul class="footer-link">
+                <ul className="footer-link">
                   <li>
                     <a href="#">Colonel Ebeya, Kinshasa</a>
                   </li>
@@ -50,46 +50,46 @@ export default function Footer() {
                   </li>
                 </ul>
               </div>
-              <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12">
-                <h3 class="footer-titel">
+              <div className="col-lg-3 col-md-6 col-sm-12 col-xs-12">
+                <h3 className="footer-titel">
                   Contact <span>Info</span>
                 </h3>
-                <ul class="address">
+                <ul className="address">
                   <li>
                     <a href="#">
-                      <i class="lni-map-marker"></i>N°3, Colonel Ebeya, Gombe,{" "}
+                      <i className="lni-map-marker"></i>N°3, Colonel Ebeya, Gombe,{" "}
                       <br />
                       Kinshasa
                     </a>
                   </li>
                   <li>
                     <a href="#">
-                      <i class="lni-phone-handset"></i> +243 999 992 118
+                      <i className="lni-phone-handset"></i> +243 999 992 118
                     </a>
                   </li>
                   <li>
                     <a href="#">
-                      <i class="lni-envelope"></i> blaisembombo@gmail.com
+                      <i className="lni-envelope"></i> blaisembombo@gmail.com
                     </a>
                   </li>
                 </ul>
               </div>
-              <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12">
-                <h3 class="footer-titel">
+              <div className="col-lg-3 col-md-6 col-sm-12 col-xs-12">
+                <h3 className="footer-titel">
                   Nous sommes sur les <span>Réseaux</span>
                 </h3>
                 {/* <form
                   method="post"
                   id="subscribe-form"
                   name="subscribe-form"
-                  class="validate"
+                  className="validate"
                 >
-                  <div class="form-group is-empty">
+                  <div className="form-group is-empty">
                     <input
                       type="email"
                       value=""
                       name="Email"
-                      class="form-control"
+                      className="form-control"
                       id="EMAIL"
                       placeholder="Email address"
                       required=""
@@ -98,26 +98,26 @@ export default function Footer() {
                       type="submit"
                       name="subscribe"
                       id="subscribes"
-                      class="btn btn-common sub-btn"
+                      className="btn btn-common sub-btn"
                     >
-                      <i class="lni-envelope"></i>
+                      <i className="lni-envelope"></i>
                     </button>
-                    <div class="clearfix"></div>
+                    <div className="clearfix"></div>
                   </div>
                 </form>
                  */}
-                <div class="social-icon">
-                  <a class="facebook" href="#">
-                    <i class="lni-facebook-filled"></i>
+                <div className="social-icon">
+                  <a className="facebook" href="#">
+                    <i className="lni-facebook-filled"></i>
                   </a>
-                  <a class="twitter" href="#">
-                    <i class="lni-twitter-filled"></i>
+                  <a className="twitter" href="#">
+                    <i className="lni-twitter-filled"></i>
                   </a>
-                  <a class="instagram" href="#">
-                    <i class="lni-instagram-filled"></i>
+                  <a className="instagram" href="#">
+                    <i className="lni-instagram-filled"></i>
                   </a>
-                  <a class="linkedin" href="#">
-                    <i class="lni-linkedin-filled"></i>
+                  <a className="linkedin" href="#">
+                    <i className="lni-linkedin-filled"></i>
                   </a>
                 </div>
               </div>

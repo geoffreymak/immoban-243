@@ -3,67 +3,67 @@ import React from "react";
 function PropertyDetail() {
   return (
     <>
-      <div id="page-banner-area" class="page-banner">
-        <div class="page-banner-title">
-          <div class="text-center">
+      <div id="page-banner-area" className="page-banner">
+        <div className="page-banner-title">
+          <div className="text-center">
             <h2>Properties</h2>
             <a href="#">
-              <i class="lni-home"></i> Home
+              <i className="lni-home"></i> Home
             </a>
-            <span class="crumbs-spacer">
-              <i class="lni-chevron-right"></i>
+            <span className="crumbs-spacer">
+              <i className="lni-chevron-right"></i>
             </span>
-            <span class="current">Standard Detail</span>
+            <span className="current">Standard Detail</span>
           </div>
         </div>
       </div>
 
-      <div id="content" class="section-padding">
-        <div class="container">
-          <div class="property-details">
-            <div class="row">
-              <div class="col-lg-4 col-md-12 col-xs-12">
-                <div class="info">
+      <div id="content" className="section-padding">
+        <div className="container">
+          <div className="property-details">
+            <div className="row">
+              <div className="col-lg-4 col-md-12 col-xs-12">
+                <div className="info">
                   <h3>
-                    Luxury Apartment <span class="badge">sale</span>
+                    Luxury Apartment <span className="badge">sale</span>
                   </h3>
-                  <p class="room-type">Living Room</p>
-                  <p class="address">
-                    <i class="lni-map-marker"></i> York Blvd, Los Angeles, US
+                  <p className="room-type">Living Room</p>
+                  <p className="address">
+                    <i className="lni-map-marker"></i> York Blvd, Los Angeles, US
                     View, CA 94041USA
                   </p>
                 </div>
               </div>
-              <div class="col-lg-4 col-md-12 col-xs-12">
-                <div class="details">
-                  <div class="details-listing">
+              <div className="col-lg-4 col-md-12 col-xs-12">
+                <div className="details">
+                  <div className="details-listing">
                     <p>Bedrooms</p>
                     <h5>05</h5>
                   </div>
-                  <div class="details-listing">
+                  <div className="details-listing">
                     <p>Washrooms</p>
                     <h5>06</h5>
                   </div>
-                  <div class="details-listing">
+                  <div className="details-listing">
                     <p>Size (Sq.ft)</p>
                     <h5>1650</h5>
                   </div>
                 </div>
               </div>
-              <div class="col-lg-4 col-md-12 col-xs-12">
-                <div class="others">
+              <div className="col-lg-4 col-md-12 col-xs-12">
+                <div className="others">
                   <ul>
                     <li>
                       <span>$22,500.00</span>
                     </li>
                     <li>
                       <a href="#">
-                        <i class="lni-bookmark-alt"></i>
+                        <i className="lni-bookmark-alt"></i>
                       </a>
                     </li>
                     <li>
                       <a href="#">
-                        <i class="lni-heart"></i>
+                        <i className="lni-heart"></i>
                       </a>
                     </li>
                   </ul>
@@ -71,17 +71,17 @@ function PropertyDetail() {
               </div>
             </div>
           </div>
-          <div class="row">
-            <div class="col-lg-8 col-md-12 col-xs-12">
-              <div class="property-slider">
+          <div className="row">
+            <div className="col-lg-8 col-md-12 col-xs-12">
+              <div className="property-slider">
                 <div
                   id="property-slider"
-                  class="owl-carousel owl-theme"
+                  className="owl-carousel owl-theme"
                   style={{ opacity: 1, display: "block" }}
                 >
-                  <div class="owl-wrapper-outer">
+                  <div className="owl-wrapper-outer">
                     <div
-                      class="owl-wrapper"
+                      className="owl-wrapper"
                       style={{
                         width: 4380,
                         left: 0,
@@ -90,38 +90,38 @@ function PropertyDetail() {
                         transform: "translate3d(-1460px, 0px, 0px)",
                       }}
                     >
-                      <div class="owl-item" style={{ width: 730 }}>
-                        <div class="item">
+                      <div className="owl-item" style={{ width: 730 }}>
+                        <div className="item">
                           <img src="assets/img/productinfo/img1.jpg" alt="" />
                         </div>
                       </div>
-                      <div class="owl-item" style={{ width: 730 }}>
-                        <div class="item">
+                      <div className="owl-item" style={{ width: 730 }}>
+                        <div className="item">
                           <img src="assets/img/productinfo/img2.jpg" alt="" />
                         </div>
                       </div>
-                      <div class="owl-item" style={{ width: 730 }}>
-                        <div class="item">
+                      <div className="owl-item" style={{ width: 730 }}>
+                        <div className="item">
                           <img src="assets/img/productinfo/img3.jpg" alt="" />
                         </div>
                       </div>
                     </div>
                   </div>
 
-                  <div class="owl-controls clickable">
-                    <div class="owl-buttons">
-                      <div class="owl-prev">
-                        <i class="lni-chevron-left"></i>
+                  <div className="owl-controls clickable">
+                    <div className="owl-buttons">
+                      <div className="owl-prev">
+                        <i className="lni-chevron-left"></i>
                       </div>
-                      <div class="owl-next">
-                        <i class="lni-chevron-right"></i>
+                      <div className="owl-next">
+                        <i className="lni-chevron-right"></i>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
-              <div class="inner-box property-dsc">
-                <h2 class="desc-title">Property Description</h2>
+              <div className="inner-box property-dsc">
+                <h2 className="desc-title">Property Description</h2>
                 <p>
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras
                   et dui vestibulum, bibendum purus sit amet, vulputate mauris.
@@ -150,9 +150,9 @@ function PropertyDetail() {
                   praesentium.
                 </p>
               </div>
-              <div class="inner-box short-info">
-                <h2 class="desc-title">Quick Summary</h2>
-                <ul class="additional-details">
+              <div className="inner-box short-info">
+                <h2 className="desc-title">Quick Summary</h2>
+                <ul className="additional-details">
                   <li>
                     <strong>AC:</strong>
                     <span>Central</span>
@@ -206,9 +206,9 @@ function PropertyDetail() {
                   </li>
                 </ul>
               </div>
-              <div class="inner-box featured">
-                <h2 class="desc-title">Details</h2>
-                <ul class="property-features">
+              <div className="inner-box featured">
+                <h2 className="desc-title">Details</h2>
+                <ul className="property-features">
                   <li>
                     Building Age: <span>2 Years</span>
                   </li>
@@ -235,46 +235,46 @@ function PropertyDetail() {
                   </li>
                 </ul>
               </div>
-              <div class="inner-box featured">
-                <h2 class="desc-title">Features</h2>
-                <ul class="property-features checkboxes">
+              <div className="inner-box featured">
+                <h2 className="desc-title">Features</h2>
+                <ul className="property-features checkboxes">
                   <li>
-                    <i class="lni-check-box"></i> Air Conditioning
+                    <i className="lni-check-box"></i> Air Conditioning
                   </li>
                   <li>
-                    <i class="lni-check-box"></i> Central Heating
+                    <i className="lni-check-box"></i> Central Heating
                   </li>
                   <li>
-                    <i class="lni-check-box"></i> Laundry Room
+                    <i className="lni-check-box"></i> Laundry Room
                   </li>
                   <li>
-                    <i class="lni-check-box"></i> Window Covering
+                    <i className="lni-check-box"></i> Window Covering
                   </li>
                   <li>
-                    <i class="lni-check-box"></i> Swimming Pool
+                    <i className="lni-check-box"></i> Swimming Pool
                   </li>
                   <li>
-                    <i class="lni-check-box"></i> Central Heating
+                    <i className="lni-check-box"></i> Central Heating
                   </li>
                   <li>
-                    <i class="lni-check-box"></i> Gym
+                    <i className="lni-check-box"></i> Gym
                   </li>
                   <li>
-                    <i class="lni-check-box"></i> Internet
+                    <i className="lni-check-box"></i> Internet
                   </li>
                   <li>
-                    <i class="lni-check-box"></i> Alarm
+                    <i className="lni-check-box"></i> Alarm
                   </li>
                 </ul>
               </div>
-              <div class="inner-box accordion-fp">
-                <h2 class="desc-title">Floor Plans</h2>
+              <div className="inner-box accordion-fp">
+                <h2 className="desc-title">Floor Plans</h2>
                 <div id="accordion">
-                  <div class="card">
-                    <div class="card-header" id="headingOne">
-                      <h3 class="accordion-heading">
+                  <div className="card">
+                    <div className="card-header" id="headingOne">
+                      <h3 className="accordion-heading">
                         <button
-                          class="accordion-title"
+                          className="accordion-title"
                           data-toggle="collapse"
                           data-target="#collapseOne"
                           aria-expanded="true"
@@ -286,14 +286,14 @@ function PropertyDetail() {
                     </div>
                     <div
                       id="collapseOne"
-                      class="collapse show"
+                      className="collapse show"
                       aria-labelledby="headingOne"
                       data-parent="#accordion"
                     >
-                      <div class="card-body">
-                        <div class="thumb">
+                      <div className="card-body">
+                        <div className="thumb">
                           <img
-                            class="img-fluid"
+                            className="img-fluid"
                             src="assets/img/productinfo/floor-thumb-1.jpg"
                             alt=""
                           />
@@ -301,11 +301,11 @@ function PropertyDetail() {
                       </div>
                     </div>
                   </div>
-                  <div class="card">
-                    <div class="card-header" id="headingTwo">
-                      <h3 class="accordion-heading">
+                  <div className="card">
+                    <div className="card-header" id="headingTwo">
+                      <h3 className="accordion-heading">
                         <button
-                          class="accordion-title collapsed"
+                          className="accordion-title collapsed"
                           data-toggle="collapse"
                           data-target="#collapseTwo"
                           aria-expanded="false"
@@ -317,14 +317,14 @@ function PropertyDetail() {
                     </div>
                     <div
                       id="collapseTwo"
-                      class="collapse"
+                      className="collapse"
                       aria-labelledby="headingTwo"
                       data-parent="#accordion"
                     >
-                      <div class="card-body">
-                        <div class="thumb">
+                      <div className="card-body">
+                        <div className="thumb">
                           <img
-                            class="img-fluid"
+                            className="img-fluid"
                             src="assets/img/productinfo/floor-thumb-2.jpg"
                             alt=""
                           />
@@ -332,11 +332,11 @@ function PropertyDetail() {
                       </div>
                     </div>
                   </div>
-                  <div class="card">
-                    <div class="card-header" id="headingThree">
-                      <h3 class="accordion-heading">
+                  <div className="card">
+                    <div className="card-header" id="headingThree">
+                      <h3 className="accordion-heading">
                         <button
-                          class="accordion-title collapsed"
+                          className="accordion-title collapsed"
                           data-toggle="collapse"
                           data-target="#collapseThree"
                           aria-expanded="false"
@@ -348,14 +348,14 @@ function PropertyDetail() {
                     </div>
                     <div
                       id="collapseThree"
-                      class="collapse"
+                      className="collapse"
                       aria-labelledby="headingThree"
                       data-parent="#accordion"
                     >
-                      <div class="card-body">
-                        <div class="thumb">
+                      <div className="card-body">
+                        <div className="thumb">
                           <img
-                            class="img-fluid"
+                            className="img-fluid"
                             src="assets/img/productinfo/floor-thumb-3.jpg"
                             alt=""
                           />
@@ -365,8 +365,8 @@ function PropertyDetail() {
                   </div>
                 </div>
               </div>
-              <div class="inner-box location-map">
-                <h2 class="desc-title">Location On Map</h2>
+              <div className="inner-box location-map">
+                <h2 className="desc-title">Location On Map</h2>
                 <div
                   id="conatiner-map"
                   style={{ position: relative, overflow: hidden }}
@@ -382,7 +382,7 @@ function PropertyDetail() {
                     }}
                   >
                     <div
-                      class="gm-style"
+                      className="gm-style"
                       style="
                       position: absolute;
                       z-index: 0;
@@ -1413,7 +1413,7 @@ function PropertyDetail() {
                           </div>
                         </div>
                         <div
-                          class="gm-style-moc"
+                          className="gm-style-moc"
                           style="
                           z-index: 4;
                           position: absolute;
@@ -1427,7 +1427,7 @@ function PropertyDetail() {
                           opacity: 0;
                         "
                         >
-                          <p class="gm-style-mot"></p>
+                          <p className="gm-style-mot"></p>
                         </div>
                       </div>
                       <iframe
@@ -1475,7 +1475,7 @@ function PropertyDetail() {
                           aria-label="Passer en plein écran"
                           title="Passer en plein écran"
                           type="button"
-                          class="gm-control-active gm-fullscreen-control"
+                          className="gm-control-active gm-fullscreen-control"
                           style="
                           background: none rgb(255, 255, 255);
                           border: 0px;
@@ -1518,7 +1518,7 @@ function PropertyDetail() {
                       <div></div>
                       <div>
                         <div
-                          class="
+                          className="
                           gmnoprint
                           gm-bundled-control gm-bundled-control-on-bottom
                         "
@@ -1535,7 +1535,7 @@ function PropertyDetail() {
                         "
                         >
                           <div
-                            class="gmnoprint"
+                            className="gmnoprint"
                             data-control-width="40"
                             data-control-height="40"
                             style="display: none; position: absolute"
@@ -1554,7 +1554,7 @@ function PropertyDetail() {
                                 aria-label="Faire pivoter la carte dans le sens des aiguilles d'une montre"
                                 title="Faire pivoter la carte dans le sens des aiguilles d'une montre"
                                 type="button"
-                                class="gm-control-active"
+                                className="gm-control-active"
                                 style="
                                 background: none;
                                 display: none;
@@ -1602,7 +1602,7 @@ function PropertyDetail() {
                                 aria-label="Faire pivoter la carte dans le sens inverse des aiguilles d'une montre"
                                 title="Faire pivoter la carte dans le sens inverse des aiguilles d'une montre"
                                 type="button"
-                                class="gm-control-active"
+                                className="gm-control-active"
                                 style="
                                 background: none;
                                 display: none;
@@ -1651,7 +1651,7 @@ function PropertyDetail() {
                                 aria-label="Incliner la carte"
                                 title="Incliner la carte"
                                 type="button"
-                                class="gm-tilt gm-control-active"
+                                className="gm-tilt gm-control-active"
                                 style="
                                 background: none;
                                 display: block;
@@ -1729,7 +1729,7 @@ function PropertyDetail() {
                       <div></div>
                       <div>
                         <div
-                          class="gmnoprint"
+                          className="gmnoprint"
                           style="
                           z-index: 1000001;
                           position: absolute;
@@ -1739,7 +1739,7 @@ function PropertyDetail() {
                         >
                           <div
                             draggable="false"
-                            class="gm-style-cc"
+                            className="gm-style-cc"
                             style="
                             user-select: none;
                             height: 14px;
@@ -1807,7 +1807,7 @@ function PropertyDetail() {
                           </div>
                         </div>
                         <div
-                          class="gmnoprint"
+                          className="gmnoprint"
                           style="
                           z-index: 1000001;
                           position: absolute;
@@ -1818,7 +1818,7 @@ function PropertyDetail() {
                         >
                           <div
                             draggable="false"
-                            class="gm-style-cc"
+                            className="gm-style-cc"
                             style="
                             user-select: none;
                             height: 14px;
@@ -1887,7 +1887,7 @@ function PropertyDetail() {
                           </div>
                         </div>
                         <div
-                          class="gmnoprint gm-style-cc"
+                          className="gmnoprint gm-style-cc"
                           draggable="false"
                           style="
                           z-index: 1000001;
@@ -1949,7 +1949,7 @@ function PropertyDetail() {
                         </div>
                         <div
                           draggable="false"
-                          class="gm-style-cc"
+                          className="gm-style-cc"
                           style="
                           user-select: none;
                           height: 14px;
@@ -2012,7 +2012,7 @@ function PropertyDetail() {
                           </div>
                         </div>
                         <div
-                          class="gmnoscreen"
+                          className="gmnoscreen"
                           style="position: absolute; right: 0px; bottom: 0px"
                         >
                           <div
@@ -2084,7 +2084,7 @@ function PropertyDetail() {
                           </a>
                         </td>
                         <td style="text-align: right">
-                          <button class="dismissButton">OK</button>
+                          <button className="dismissButton">OK</button>
                         </td>
                       </tr>
                     </table>
@@ -2095,87 +2095,87 @@ function PropertyDetail() {
 
             <aside
               id="sidebar"
-              class="col-lg-4 col-md-12 col-xs-12 right-sidebar"
+              className="col-lg-4 col-md-12 col-xs-12 right-sidebar"
             >
-              <div class="widget mb2">
-                <button class="widget-button">
-                  <i class="lni-printer"></i>
+              <div className="widget mb2">
+                <button className="widget-button">
+                  <i className="lni-printer"></i>
                 </button>
-                <button class="widget-button">
-                  <i class="lni-star"></i>
+                <button className="widget-button">
+                  <i className="lni-star"></i>
                 </button>
-                <button class="widget-button">
-                  <i class="lni-zip"></i>
+                <button className="widget-button">
+                  <i className="lni-zip"></i>
                 </button>
-                <div class="clearfix"></div>
+                <div className="clearfix"></div>
               </div>
 
-              <div class="widget mt3">
-                <div class="agent-inner">
-                  <div class="agent-title">
-                    <div class="agent-photo">
+              <div className="widget mt3">
+                <div className="agent-inner">
+                  <div className="agent-title">
+                    <div className="agent-photo">
                       <a href="#">
                         <img src="assets/img/productinfo/agent.jpg" alt="" />
                       </a>
                     </div>
-                    <div class="agent-details">
+                    <div className="agent-details">
                       <h3>
                         <a href="#">Simon Heqburn</a>
                       </h3>
                       <span>
-                        <i class="lni-phone-handset"></i>(123) 123-456
+                        <i className="lni-phone-handset"></i>(123) 123-456
                       </span>
                     </div>
                   </div>
                   <input
                     type="text"
-                    class="form-control"
+                    className="form-control"
                     placeholder="Your Email"
                   />
                   <input
                     type="text"
-                    class="form-control"
+                    className="form-control"
                     placeholder="Your Phone"
                   />
                   <p>
                     I'm interested in this property [ID 123456] and I'd like to
                     know more details.
                   </p>
-                  <button class="btn btn-common fullwidth mt-4">
+                  <button className="btn btn-common fullwidth mt-4">
                     Send Message
                   </button>
                 </div>
               </div>
 
-              <div class="widget mt3">
-                <h3 class="sidebar-title">Featured Properties</h3>
+              <div className="widget mt3">
+                <h3 className="sidebar-title">Featured Properties</h3>
                 <div
                   id="listing-carousel"
-                  class="owl-carousel owl-theme"
+                  className="owl-carousel owl-theme"
                   style="opacity: 1; display: block"
                 >
-                  <div class="owl-wrapper-outer">
+                  <div className="owl-wrapper-outer">
                     <div
-                      class="owl-wrapper"
+                      className="owl-wrapper"
                       style="width: 2100px; left: 0px; display: block"
                     >
-                      <div class="owl-item" style="width: 350px">
-                        <div class="item">
-                          <div class="listing-item">
-                            <a href="#" class="listing-img-container">
+                      <div className="owl-item" style="width: 350px">
+                        <div className="item">
+                          <div className="listing-item">
+                            <a href="#" className="listing-img-container">
                               <img
                                 src="assets/img/productinfo/listing1.jpg"
                                 alt=""
                               />
-                              <div class="listing-badges">
-                                <span class="featured">Featured</span>
+                              <div className="listing-badges">
+                                <span className="featured">Featured</span>
                                 <span>For Sale</span>
                               </div>
-                              <div class="listing-content">
-                                <span class="listing-title">
+                              <div className="listing-content">
+                                <span className="listing-title">
                                   Eagle Apartments <i>$275,000</i>
                                 </span>
-                                <ul class="listing-content">
+                                <ul className="listing-content">
                                   <li>
                                     Area <span>530 sq ft</span>
                                   </li>
@@ -2194,23 +2194,23 @@ function PropertyDetail() {
                           </div>
                         </div>
                       </div>
-                      <div class="owl-item" style="width: 350px">
-                        <div class="item">
-                          <div class="listing-item">
-                            <a href="#" class="listing-img-container">
+                      <div className="owl-item" style="width: 350px">
+                        <div className="item">
+                          <div className="listing-item">
+                            <a href="#" className="listing-img-container">
                               <img
                                 src="assets/img/productinfo/listing2.jpg"
                                 alt=""
                               />
-                              <div class="listing-badges">
-                                <span class="featured">Featured</span>
+                              <div className="listing-badges">
+                                <span className="featured">Featured</span>
                                 <span>For Sale</span>
                               </div>
-                              <div class="listing-content">
-                                <span class="listing-title">
+                              <div className="listing-content">
+                                <span className="listing-title">
                                   Eagle Apartments <i>$275,000</i>
                                 </span>
-                                <ul class="listing-content">
+                                <ul className="listing-content">
                                   <li>
                                     Area <span>530 sq ft</span>
                                   </li>
@@ -2229,23 +2229,23 @@ function PropertyDetail() {
                           </div>
                         </div>
                       </div>
-                      <div class="owl-item" style="width: 350px">
-                        <div class="item">
-                          <div class="listing-item">
-                            <a href="#" class="listing-img-container">
+                      <div className="owl-item" style="width: 350px">
+                        <div className="item">
+                          <div className="listing-item">
+                            <a href="#" className="listing-img-container">
                               <img
                                 src="assets/img/productinfo/listing3.jpg"
                                 alt=""
                               />
-                              <div class="listing-badges">
-                                <span class="featured">Featured</span>
+                              <div className="listing-badges">
+                                <span className="featured">Featured</span>
                                 <span>For Sale</span>
                               </div>
-                              <div class="listing-content">
-                                <span class="listing-title">
+                              <div className="listing-content">
+                                <span className="listing-title">
                                   Eagle Apartments <i>$275,000</i>
                                 </span>
-                                <ul class="listing-content">
+                                <ul className="listing-content">
                                   <li>
                                     Area <span>530 sq ft</span>
                                   </li>
@@ -2267,84 +2267,84 @@ function PropertyDetail() {
                     </div>
                   </div>
 
-                  <div class="owl-controls clickable">
-                    <div class="owl-buttons">
-                      <div class="owl-prev">
-                        <i class="lni-chevron-left"></i>
+                  <div className="owl-controls clickable">
+                    <div className="owl-buttons">
+                      <div className="owl-prev">
+                        <i className="lni-chevron-left"></i>
                       </div>
-                      <div class="owl-next">
-                        <i class="lni-chevron-right"></i>
+                      <div className="owl-next">
+                        <i className="lni-chevron-right"></i>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
 
-              <div class="widget">
-                <h3 class="sidebar-title">Mortgage Calculator</h3>
-                <form class="mortgage-calc">
-                  <p class="tip-content">Set This Property Price</p>
-                  <div class="calc-input">
+              <div className="widget">
+                <h3 className="sidebar-title">Mortgage Calculator</h3>
+                <form className="mortgage-calc">
+                  <p className="tip-content">Set This Property Price</p>
+                  <div className="calc-input">
                     <input
                       type="text"
-                      class="form-control"
+                      className="form-control"
                       name="amount"
                       placeholder="Sale Price"
                       required=""
                     />
                     <label>$</label>
                   </div>
-                  <div class="calc-input">
+                  <div className="calc-input">
                     <input
                       type="text"
-                      class="form-control"
+                      className="form-control"
                       placeholder="Down Payment"
                     />
-                    <label class="fa fa-usd">$</label>
+                    <label className="fa fa-usd">$</label>
                   </div>
-                  <div class="calc-input">
+                  <div className="calc-input">
                     <input
                       type="text"
-                      class="form-control"
+                      className="form-control"
                       placeholder="Loan Term (Years)"
                       required=""
                     />
-                    <label class="lni-calendar"></label>
+                    <label className="lni-calendar"></label>
                   </div>
-                  <div class="calc-input">
+                  <div className="calc-input">
                     <input
                       type="text"
-                      class="form-control"
+                      className="form-control"
                       placeholder="Interest Rate"
                       required=""
                     />
                     <label>%</label>
                   </div>
-                  <button class="btn btn-common">Calculate</button>
+                  <button className="btn btn-common">Calculate</button>
                 </form>
               </div>
 
-              <div class="widget widget-social">
-                <h3 class="sidebar-title">Social Media</h3>
-                <ul class="social-icons">
+              <div className="widget widget-social">
+                <h3 className="sidebar-title">Social Media</h3>
+                <ul className="social-icons">
                   <li>
-                    <a class="twitter" href="#">
-                      <i class="lni-twitter-filled"></i>
+                    <a className="twitter" href="#">
+                      <i className="lni-twitter-filled"></i>
                     </a>
                   </li>
                   <li>
-                    <a class="facebook" href="#">
-                      <i class="lni-facebook-filled"></i>
+                    <a className="facebook" href="#">
+                      <i className="lni-facebook-filled"></i>
                     </a>
                   </li>
                   <li>
-                    <a class="google" href="#">
-                      <i class="lni-google-plus"></i>
+                    <a className="google" href="#">
+                      <i className="lni-google-plus"></i>
                     </a>
                   </li>
                   <li>
-                    <a class="linkedin" href="#">
-                      <i class="lni-linkedin-filled"></i>
+                    <a className="linkedin" href="#">
+                      <i className="lni-linkedin-filled"></i>
                     </a>
                   </li>
                 </ul>
@@ -2352,37 +2352,37 @@ function PropertyDetail() {
             </aside>
           </div>
         </div>
-        <div class="container">
-          <div class="row">
-            <div class="col-12">
-              <h2 class="desc-title">Similar Properties</h2>
+        <div className="container">
+          <div className="row">
+            <div className="col-12">
+              <h2 className="desc-title">Similar Properties</h2>
             </div>
-            <div class="col-lg-4 col-md-6 col-xs-12">
-              <div class="property-main">
-                <div class="property-wrap">
-                  <div class="property-item">
-                    <div class="item-thumb">
-                      <a class="hover-effect" href="property.html">
+            <div className="col-lg-4 col-md-6 col-xs-12">
+              <div className="property-main">
+                <div className="property-wrap">
+                  <div className="property-item">
+                    <div className="item-thumb">
+                      <a className="hover-effect" href="property.html">
                         <img
-                          class="img-fluid"
+                          className="img-fluid"
                           src="assets/img/property/house-1.jpg"
                           alt=""
                         />
                       </a>
-                      <div class="label-inner">
-                        <span class="label-status label bg-red">For Sale</span>
+                      <div className="label-inner">
+                        <span className="label-status label bg-red">For Sale</span>
                       </div>
                     </div>
-                    <div class="item-body">
-                      <h3 class="property-title">
+                    <div className="item-body">
+                      <h3 className="property-title">
                         <a href="property.html">Amazing oceanfront apartment</a>
                       </h3>
-                      <div class="adderess">
-                        <i class="lni-map-marker"></i> Drive Street, Los
+                      <div className="adderess">
+                        <i className="lni-map-marker"></i> Drive Street, Los
                         Angeles, US
                       </div>
-                      <div class="pricin-list">
-                        <div class="property-price">
+                      <div className="pricin-list">
+                        <div className="property-price">
                           <span>$1,500</span>
                         </div>
                         <p>
@@ -2395,31 +2395,31 @@ function PropertyDetail() {
                 </div>
               </div>
             </div>
-            <div class="col-lg-4 col-md-6 col-xs-12">
-              <div class="property-main">
-                <div class="property-wrap">
-                  <div class="property-item">
-                    <div class="item-thumb">
-                      <a class="hover-effect" href="property.html">
+            <div className="col-lg-4 col-md-6 col-xs-12">
+              <div className="property-main">
+                <div className="property-wrap">
+                  <div className="property-item">
+                    <div className="item-thumb">
+                      <a className="hover-effect" href="property.html">
                         <img
-                          class="img-fluid"
+                          className="img-fluid"
                           src="assets/img/property/house-2.jpg"
                           alt=""
                         />
                       </a>
-                      <div class="label-inner">
-                        <span class="label-status label">For Rent</span>
+                      <div className="label-inner">
+                        <span className="label-status label">For Rent</span>
                       </div>
                     </div>
-                    <div class="item-body">
-                      <h3 class="property-title">
+                    <div className="item-body">
+                      <h3 className="property-title">
                         <a href="property.html">Family Condo</a>
                       </h3>
-                      <div class="adderess">
-                        <i class="lni-map-marker"></i> Louis, Missouri, US
+                      <div className="adderess">
+                        <i className="lni-map-marker"></i> Louis, Missouri, US
                       </div>
-                      <div class="pricin-list">
-                        <div class="property-price">
+                      <div className="pricin-list">
+                        <div className="property-price">
                           <span>$27,00</span>
                         </div>
                         <p>
@@ -2432,31 +2432,31 @@ function PropertyDetail() {
                 </div>
               </div>
             </div>
-            <div class="col-lg-4 col-md-6 col-xs-12">
-              <div class="property-main">
-                <div class="property-wrap">
-                  <div class="property-item">
-                    <div class="item-thumb">
-                      <a class="hover-effect" href="property.html">
+            <div className="col-lg-4 col-md-6 col-xs-12">
+              <div className="property-main">
+                <div className="property-wrap">
+                  <div className="property-item">
+                    <div className="item-thumb">
+                      <a className="hover-effect" href="property.html">
                         <img
-                          class="img-fluid"
+                          className="img-fluid"
                           src="assets/img/property/house-3.jpg"
                           alt=""
                         />
                       </a>
-                      <div class="label-inner">
-                        <span class="label-status label bg-yellow">New</span>
+                      <div className="label-inner">
+                        <span className="label-status label bg-yellow">New</span>
                       </div>
                     </div>
-                    <div class="item-body">
-                      <h3 class="property-title">
+                    <div className="item-body">
+                      <h3 className="property-title">
                         <a href="property.html">Guaranteed modern home</a>
                       </h3>
-                      <div class="adderess">
-                        <i class="lni-map-marker"></i> Avenue C, New York, US
+                      <div className="adderess">
+                        <i className="lni-map-marker"></i> Avenue C, New York, US
                       </div>
-                      <div class="pricin-list">
-                        <div class="property-price">
+                      <div className="pricin-list">
+                        <div className="property-price">
                           <span>$1,750</span>
                         </div>
                         <p>

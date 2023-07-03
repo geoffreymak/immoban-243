@@ -167,22 +167,22 @@ export default function Intro() {
   };
   return (
     <>
-      <div class="search-container">
-        <div class="container">
-          <div class="row">
-            <div class="col-12">
-              <div class="section-title-header text-center">
-                <h2 class="section-title">Recherche par propriétés</h2>
+      <div className="search-container">
+        <div className="container">
+          <div className="row">
+            <div className="col-12">
+              <div className="section-title-header text-center">
+                <h2 className="section-title">Recherche par propriétés</h2>
               </div>
             </div>
           </div>
-          <div class="content">
-            <div class="row">
-              <div class="col-lg-3 col-md-6 col-xs-12">
-                <div class="search-category-container">
-                  <label class="styled-select">
+          <div className="content">
+            <div className="row">
+              <div className="col-lg-3 col-md-6 col-xs-12">
+                <div className="search-category-container">
+                  <label className="styled-select">
                     <select
-                      class="classic"
+                      className="classic"
                       value={categorie}
                       onChange={(e) => setCategorie(e.target.value)}
                     >
@@ -198,11 +198,11 @@ export default function Intro() {
                   </label>
                 </div>
               </div>
-              <div class="col-lg-3 col-md-6 col-xs-12">
-                <div class="search-category-container">
-                  <label class="styled-select">
+              <div className="col-lg-3 col-md-6 col-xs-12">
+                <div className="search-category-container">
+                  <label className="styled-select">
                     <select
-                      class="classic"
+                      className="classic"
                       value={type}
                       onChange={(e) => setType(e.target.value)}
                     >
@@ -218,11 +218,11 @@ export default function Intro() {
                   </label>
                 </div>
               </div>
-              <div class="col-lg-3 col-md-6 col-xs-12">
-                <div class="search-category-container">
-                  <label class="styled-select">
+              <div className="col-lg-3 col-md-6 col-xs-12">
+                <div className="search-category-container">
+                  <label className="styled-select">
                     <select
-                      class="classic"
+                      className="classic"
                       value={commune}
                       onChange={(e) => setCommune(e.target.value)}
                     >
@@ -238,27 +238,27 @@ export default function Intro() {
                   </label>
                 </div>
               </div>
-              <div class="col-lg-3 col-md-6 col-xs-12">
-                <div class="text-right btn-section">
+              <div className="col-lg-3 col-md-6 col-xs-12">
+                <div className="text-right btn-section">
                   <button
                     type="button"
-                    class="btn btn-common"
+                    className="btn btn-common"
                     onClick={() => setSearching(true)}
                   >
-                    <i class="lni-search"></i> Recherchez
+                    <i className="lni-search"></i> Recherchez
                   </button>
                 </div>
               </div>
             </div>
             <div
-              class="row range-slider option-hide"
+              className="row range-slider option-hide"
               style={{ display: "none" }}
             >
-              <div class="col-lg-3 col-md-6 col-xs-12">
-                <div class="search-category-container">
-                  <label class="styled-select">
+              <div className="col-lg-3 col-md-6 col-xs-12">
+                <div className="search-category-container">
+                  <label className="styled-select">
                     <select
-                      class="classic"
+                      className="classic"
                       value={province}
                       onChange={(e) => setProvince(e.target.value)}
                     >
@@ -274,11 +274,11 @@ export default function Intro() {
                   </label>
                 </div>
               </div>
-              <div class="col-lg-3 col-md-6 col-xs-12">
-                <div class="search-category-container">
-                  <label class="styled-select">
+              <div className="col-lg-3 col-md-6 col-xs-12">
+                <div className="search-category-container">
+                  <label className="styled-select">
                     <input
-                      class="classic select w-100"
+                      className="classic select w-100"
                       placeholder="Quartier"
                       type="text"
                       value={quartier}
@@ -287,7 +287,7 @@ export default function Intro() {
                   </label>
                 </div>
               </div>
-              <div class="col-lg-6 col-md-12 col-xs-12">
+              <div className="col-lg-6 col-md-12 col-xs-12">
                 {/* <input
                 type="text"
                 id="range"
@@ -322,9 +322,9 @@ export default function Intro() {
                 </Stack>
               </div>
             </div>
-            <div class="row">
-              <div class="col-xs-12 col-sm-12 col-md-12 text-left">
-                <a href="#" class="show-options">
+            <div className="row">
+              <div className="col-xs-12 col-sm-12 col-md-12 text-left">
+                <a href="#" className="show-options">
                   {" "}
                   Plus d'options
                 </a>
