@@ -127,13 +127,15 @@ export default function Header() {
         </div>
       </div>
       <Box sx={{ flexGrow: 1 }}>
-      <AppBar position="static">
+      <AppBar position="fixed" color="transparent">
         <Toolbar>
+        <Box sx={{ flexGrow: 1 }}>
         <Link href="/">
               <a className="navbar-brand">
                 <img src="/img/logo.png" alt="" />
               </a>
             </Link>
+            </Box>
           <Search>
                 <SearchIconWrapper onClick={onSearchClick} size="small">
                  <SearchIcon />
@@ -151,6 +153,7 @@ export default function Header() {
               </Search>
         </Toolbar>
       </AppBar>
+      <Toolbar />
     </Box>
     
       <div className="clearfix"></div>
