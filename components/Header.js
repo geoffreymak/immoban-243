@@ -8,6 +8,7 @@ import InputBase from "@mui/material/InputBase";
 import IconButton from "@mui/material/IconButton";
 import Stack from "@mui/material/Stack";
 
+import Box from "@mui/material/Box";
 import AppBar from "@mui/material/AppBar";
 import Toolbar from "@mui/material/Toolbar";
 import OutlinedInput from "@mui/material/OutlinedInput";
