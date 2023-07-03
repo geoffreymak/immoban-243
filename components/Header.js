@@ -127,7 +127,7 @@ export default function Header() {
         </div>
       </div>
       <Box sx={{ flexGrow: 1 }}>
-      <AppBar position="fixed" color="transparent">
+      <AppBar position="sticky" color="transparent">
         <Toolbar>
         <Box sx={{ flexGrow: 1 }}>
         <Link href="/">
@@ -153,7 +153,7 @@ export default function Header() {
               </Search>
         </Toolbar>
       </AppBar>
-      <Toolbar />
+     
     </Box>
     
       <div className="clearfix"></div>
