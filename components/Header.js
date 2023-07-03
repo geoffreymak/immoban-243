@@ -152,7 +152,7 @@ export default function Header() {
           <div class="collapse navbar-collapse" id="main-navbar">
             <ul class="navbar-nav mr-auto w-100 justify-content-center"></ul>
             <div class="search-add float-right">
-              <Search>
+              {/* <Search>
                 <SearchIconWrapper onClick={onSearchClick} size="small">
                  <SearchIcon />
                 </SearchIconWrapper>
@@ -166,8 +166,8 @@ export default function Header() {
                           <CloseIcon />  
                       </SearchIconWrapper>
                     } 
-              </Search>
-              {/* <form method="post">
+              </Search>*/}
+              <form method="post">
                 <div class="form-group">
                   <input
                     type="search"
@@ -179,7 +179,7 @@ export default function Header() {
                     <span class="lni-search"></span>
                   </button>
                 </div>
-              </form> */}
+              </form> 
             </div>
           </div>
         </div>
