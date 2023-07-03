@@ -124,7 +124,6 @@ export default function Header() {
         </div>
       </div>
 
-
       <nav
         class="navbar navbar-expand-lg navbar-light bg-white"
         data-toggle="sticky-onscroll"
@@ -165,7 +164,8 @@ export default function Header() {
                 />
                      {!!search &&  <SearchIconWrapper onClick={onSearchClose} size="small">
                           <CloseIcon />  
-                      </SearchIconWrapper> } 
+                      </SearchIconWrapper>
+                    } 
               </Search>
               {/* <form method="post">
                 <div class="form-group">
@@ -199,38 +199,34 @@ export default function Header() {
                   value={search}
                   onChange={(e) => setSearch(e.target.value)}
                 /> */}
-              <FormControl sx={{ m: 1 }} variant="outlined">
-                <OutlinedInput
-                  size="small"
-                  fullWidth
-                  id="outlined-adornment-password"
-                  value={search}
-                  onChange={(e) => setSearch(e.target.value)}
-                  endAdornment={
-                    <InputAdornment position="end">
-                     {!!search && <IconButton
-                        aria-label="toggle password "
-                        onClick={onSearchClose}
-                        edge="end"
-                      >
-                        <CloseIcon />
-                      </IconButton>}
-                    </InputAdornment>
-                  }
-                  startAdornment={
-                    <InputAdornment position="start">
-                      <IconButton
-                        aria-label="toggle password visibility"
-                        onClick={onSearchClick}
-                        edge="start"
-                      >
-                        <SearchIcon />
-                      </IconButton>
-                    </InputAdornment>
-                  }
-                  label="Password"
-                />
-              </FormControl>
+
+              <Stack spacing={1} direction="row">
+                <FormControl sx={{ m: 1 }} variant="outlined">
+                  <OutlinedInput
+                    size="small"
+                    fullWidth
+                    id="outlined-adornment-password"
+                    value={search}
+                    onChange={(e) => setSearch(e.target.value)}
+                    endAdornment={
+                      <InputAdornment position="end">
+                        <IconButton
+                          aria-label="toggle password visibility"
+                          onClick={onSearchClick}
+                          edge="end"
+                        >
+                          <SearchIcon />
+                        </IconButton>
+                      </InputAdornment>
+                    }
+                    label="Password"
+                  />
+                </FormControl>
+
+                {!!search &&   <IconButton aria-label="delete" onClick={onSearchClose}>
+                  <CloseIcon />  
+                </IconButton>}
+              </Stack>
             </Search>
             {/* </div> */}
           </Stack>
