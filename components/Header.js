@@ -3,6 +3,7 @@ import React from "react";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import SearchIcon from "@mui/icons-material/Search";
+import CloseIcon from "@mui/icons-material/Close";
 import InputBase from "@mui/material/InputBase";
 import IconButton from "@mui/material/IconButton";
 import Stack from "@mui/material/Stack";
@@ -62,8 +63,11 @@ export default function Header() {
   const [search, setSearch] = React.useState("");
 
   const onSearchClick = () => {
-    if (search) {
+    if (!!search) {
       router.push(`/search/${search}`);
+    }else{
+      setSearch("");
+      router.push(`/`);
     }
   };
 
@@ -148,7 +152,7 @@ export default function Header() {
             <div class="search-add float-right">
               <Search>
                 <SearchIconWrapper onClick={onSearchClick} size="small">
-                  <SearchIcon />
+                 <SearchIcon />
                 </SearchIconWrapper>
                 <StyledInputBase
                   placeholder="Search…"
@@ -156,6 +160,10 @@ export default function Header() {
                   value={search}
                   onChange={(e) => setSearch(e.target.value)}
                 />
+                     {!!search &&  <SearchIconWrapper onClick={()=>{}} size="small">
+                          <CloseIcon />  
+                      </SearchIconWrapper>
+                    } 
               </Search>
               {/* <form method="post">
                 <div class="form-group">
