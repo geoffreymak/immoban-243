@@ -124,6 +124,7 @@ export default function Header() {
         </div>
       </div>
 
+
       <nav
         class="navbar navbar-expand-lg navbar-light bg-white"
         data-toggle="sticky-onscroll"
@@ -164,8 +165,7 @@ export default function Header() {
                 />
                      {!!search &&  <SearchIconWrapper onClick={onSearchClose} size="small">
                           <CloseIcon />  
-                      </SearchIconWrapper>
-                    } 
+                      </SearchIconWrapper> } 
               </Search>
               {/* <form method="post">
                 <div class="form-group">
@@ -208,10 +208,21 @@ export default function Header() {
                   onChange={(e) => setSearch(e.target.value)}
                   endAdornment={
                     <InputAdornment position="end">
+                     {!!search && <IconButton
+                        aria-label="toggle password "
+                        onClick={onSearchClose}
+                        edge="end"
+                      >
+                        <CloseIcon />
+                      </IconButton>}
+                    </InputAdornment>
+                  }
+                  startAdornment={
+                    <InputAdornment position="start">
                       <IconButton
                         aria-label="toggle password visibility"
                         onClick={onSearchClick}
-                        edge="end"
+                        edge="start"
                       >
                         <SearchIcon />
                       </IconButton>
