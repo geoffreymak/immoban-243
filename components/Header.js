@@ -8,6 +8,8 @@ import InputBase from "@mui/material/InputBase";
 import IconButton from "@mui/material/IconButton";
 import Stack from "@mui/material/Stack";
 
+import AppBar from "@mui/material/AppBar";
+import Toolbar from "@mui/material/Toolbar";
 import OutlinedInput from "@mui/material/OutlinedInput";
 import InputLabel from "@mui/material/InputLabel";
 import InputAdornment from "@mui/material/InputAdornment";
@@ -123,36 +125,15 @@ export default function Header() {
           </div>
         </div>
       </div>
-
-      <nav
-        className="navbar navbar-expand-lg navbar-light bg-white"
-        data-toggle="sticky-onscroll"
-      >
-        <div className="container">
-          <div className="navbar-header">
-            <button
-              className="navbar-toggler"
-              type="button"
-              data-toggle="collapse"
-              data-target="#main-navbar"
-              aria-controls="main-navbar"
-              aria-expanded="false"
-              aria-label="Toggle navigation"
-            >
-              <span className="navbar-toggler-icon"></span>
-              <span className="lin-menu"></span>
-            </button>
-            <Link href="/">
+      <Box sx={{ flexGrow: 1 }}>
+      <AppBar position="static">
+        <Toolbar>
+        <Link href="/">
               <a className="navbar-brand">
                 <img src="/img/logo.png" alt="" />
               </a>
             </Link>
-          </div>
-
-          <div className="collapse navbar-collapse" id="main-navbar">
-            <ul className="navbar-nav mr-auto w-100 justify-content-center"></ul>
-            <div className="search-add float-right">
-              <Search>
+          <Search>
                 <SearchIconWrapper onClick={onSearchClick} size="small">
                  <SearchIcon />
                 </SearchIconWrapper>
@@ -167,47 +148,10 @@ export default function Header() {
                       </SearchIconWrapper>
                     } 
               </Search>
-              {/* <form method="post">
-                <div className="form-group">
-                  <input
-                    type="search"
-                    name="field-name"
-                    value=""
-                    placeholder="Search Here"
-                  />
-                  <button type="submit" className="search-btn">
-                    <span className="lni-search"></span>
-                  </button>
-                </div>
-              </form> */}
-            </div>
-          </div>
-        </div>
-
-        <div className="mobile-menu">
-          {/* <li> */}
-          <Stack sx={{ width: "100%", paddingX: 1, paddingBottom: 2 }}>
-            {/* <div className="search-add"> */}
-            <Search>
-                <SearchIconWrapper onClick={onSearchClick} size="small">
-                 <SearchIcon />
-                </SearchIconWrapper>
-                <StyledInputBase
-                  placeholder="Recherche..."
-                  inputProps={{ "aria-label": "search" }}
-                  value={search}
-                  onChange={(e) => setSearch(e.target.value)}
-                />
-                     {!!search &&  <SearchIconWrapper onClick={onSearchClose} size="small">
-                          <CloseIcon />  
-                      </SearchIconWrapper>
-                    } 
-              </Search>
-            {/* </div> */}
-          </Stack>
-          {/* </li> */}
-        </div>
-      </nav>
+        </Toolbar>
+      </AppBar>
+    </Box>
+    
       <div className="clearfix"></div>
     </header>
   );
