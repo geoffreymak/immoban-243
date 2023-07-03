@@ -18,7 +18,8 @@ function Layout({ children }) {
       <Header />
       <Purcharse />
       {children}
-      <Footer />
+      
+        {/* <Footer /> */}
       <Copyright />
       <Preloader />
     </>
