@@ -26,6 +26,7 @@ class MyDocument extends Document {
           <script src="/js/jquery.slicknav.js"></script>
           <script src="/js/nivo-lightbox.js"></script>
           <script src="/js/jquery.slicknav.js"></script>
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.6/flowbite.min.js"></script>
           <script src="/js/main.js"></script>
         </body>
       </Html>

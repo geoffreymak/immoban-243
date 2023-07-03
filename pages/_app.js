@@ -1,7 +1,10 @@
-// import "../styles/index.css";
+import "../styles/index.css";
 import Head from "next/head";
 
 import Layout from "../components/Layout";
+
+import { ThemeProvider } from "@mui/material/styles";
+import { theme } from "../utils/theme";
 
 function MyApp({ Component, pageProps }) {
   return (
@@ -64,9 +67,11 @@ function MyApp({ Component, pageProps }) {
 
         <link rel="stylesheet" type="text/css" href="/css/responsive.css" />
       </Head>
-      <Layout>
-        <Component {...pageProps} />
-      </Layout>
+      <ThemeProvider theme={theme}>
+        <Layout>
+          <Component {...pageProps} />
+        </Layout>
+      </ThemeProvider>
     </>
   );
 }
