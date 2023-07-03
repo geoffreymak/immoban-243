@@ -65,10 +65,12 @@ export default function Header() {
   const onSearchClick = () => {
     if (!!search) {
       router.push(`/search/${search}`);
-    }else{
-      setSearch("");
-      router.push(`/`);
     }
+  };
+
+  const onSearchClose = () => {
+    setSearch("");
+    router.push(`/`);
   };
 
   return (
@@ -160,7 +162,7 @@ export default function Header() {
                   value={search}
                   onChange={(e) => setSearch(e.target.value)}
                 />
-                     {!!search &&  <SearchIconWrapper onClick={()=>{}} size="small">
+                     {!!search &&  <SearchIconWrapper onClick={onSearchClose} size="small">
                           <CloseIcon />  
                       </SearchIconWrapper>
                     } 
