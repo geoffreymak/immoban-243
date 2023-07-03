@@ -130,18 +130,7 @@ export default function Header() {
       >
         <div class="container">
           <div class="navbar-header">
-            <button
-              class="navbar-toggler"
-              type="button"
-              data-toggle="collapse"
-              data-target="#main-navbar"
-              aria-controls="main-navbar"
-              aria-expanded="false"
-              aria-label="Toggle navigation"
-            >
-              <span class="navbar-toggler-icon"></span>
-              <span class="lin-menu"></span>
-            </button>
+       
             <Link href="/">
               <a class="navbar-brand">
                 <img src="/img/logo.png" alt="" />
@@ -152,43 +141,7 @@ export default function Header() {
           <div class="collapse navbar-collapse" id="main-navbar">
             <ul class="navbar-nav mr-auto w-100 justify-content-center"></ul>
             <div class="search-add float-right">
-              {/* <Search>
-                <SearchIconWrapper onClick={onSearchClick} size="small">
-                 <SearchIcon />
-                </SearchIconWrapper>
-                <StyledInputBase
-                  placeholder="Search…"
-                  inputProps={{ "aria-label": "search" }}
-                  value={search}
-                  onChange={(e) => setSearch(e.target.value)}
-                />
-                     {!!search &&  <SearchIconWrapper onClick={onSearchClose} size="small">
-                          <CloseIcon />  
-                      </SearchIconWrapper>
-                    } 
-              </Search>*/}
-              <form method="post">
-                <div class="form-group">
-                  <input
-                    type="search"
-                    name="field-name"
-                    value=""
-                    placeholder="Search Here"
-                  />
-                  <button type="submit" class="search-btn">
-                    <span class="lni-search"></span>
-                  </button>
-                </div>
-              </form> 
-            </div>
-          </div>
-        </div>
-
-        <ul class="mobile-menu">
-          {/* <li> */}
-          <Stack sx={{ width: "100%", paddingX: 1, paddingBottom: 2 }}>
-            {/* <div class="search-add"> */}
-            <Search>
+              <Search>
                 <SearchIconWrapper onClick={onSearchClick} size="small">
                  <SearchIcon />
                 </SearchIconWrapper>
@@ -203,10 +156,24 @@ export default function Header() {
                       </SearchIconWrapper>
                     } 
               </Search>
-            {/* </div> */}
-          </Stack>
-          {/* </li> */}
-        </ul>
+              {/* <form method="post">
+                <div class="form-group">
+                  <input
+                    type="search"
+                    name="field-name"
+                    value=""
+                    placeholder="Search Here"
+                  />
+                  <button type="submit" class="search-btn">
+                    <span class="lni-search"></span>
+                  </button>
+                </div>
+              </form> */}
+            </div>
+          </div>
+        </div>
+
+       
       </nav>
       <div class="clearfix"></div>
     </header>
