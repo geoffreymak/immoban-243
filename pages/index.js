@@ -12,6 +12,7 @@ import Preloader from "../components/Preloader";
 import Purcharse from "../components/Purcharse";
 import Services from "../components/Services";
 import Team from "../components/Team";
+import Map from "../components/Map";
 import Testimonial from "../components/Testimonial";
 // import Property from "../components/Property";
 import LatestProperty from "../components/LatestProperty";
@@ -34,13 +35,16 @@ function IndexPage({ latestPosts, allAgents, allTestimonies, preview }) {
       <Purcharse /> */}
       <Intro />
       {/* <PropertyDetail /> */}
+      <Purcharse />
+      <Feature />
       <Team teams={allAgents} />
       <Services />
       <LatestProperty posts={latestPosts} />
+
       <Counter />
-      <Feature />
-      <Purcharse />
       <Testimonial testimonies={allTestimonies} />
+      <Map />
+      {/* <Purcharse /> */}
       {/* <Footer />
       <Copyright />
       <Preloader /> */}
