@@ -324,10 +324,7 @@ export default function Intro() {
             </div>
             <div className="row">
               <div className="col-xs-12 col-sm-12 col-md-12 text-left">
-                <a href="#" className="show-options">
-                  {" "}
-                  Plus d'options
-                </a>
+                <span className="show-options">Plus d{"'"}options</span>
               </div>
             </div>
           </div>
