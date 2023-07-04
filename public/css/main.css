@@ -198,7 +198,7 @@ hr {
 }
 
 .btn-common {
-  background-color: #ed5437;
+  background-color: #ed5437 !important;
   position: relative;
   z-index: 1;
   color: #fff;

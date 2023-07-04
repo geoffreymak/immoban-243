@@ -8,7 +8,7 @@ export default function Map() {
           <div className="col-12 padding-0">
             <object
               style={{ border: 0, height: 450, width: "100%" }}
-              data="https://www.google.com/maps/embed/v1/place?q=Pullman+Kinshasa+Grand+Hotel,+Av.+des+Batetela,+Kinshasa,+République+démocratique+du+Congo&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8"
+              data="https://www.google.com/maps/embed/v1/place?q=Immoban243&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8"
             ></object>
           </div>
         </div>
